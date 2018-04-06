@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CleanUp.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace CleanUp.DB
         public CleanUpContext(DbContextOptions<CleanUpContext> options)
             : base(options)
         {
-
         }
+
+        public DbSet<Activity> Activities { get; set; }
     }
 }
