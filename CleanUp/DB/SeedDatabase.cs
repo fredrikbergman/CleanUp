@@ -30,6 +30,7 @@ namespace CleanUp.DB
             foreach (var item in activities)
             {
                 cleanUpContext.Activities.Add(item);
+                logger.LogInformation(item.Name);
             }
 
             cleanUpContext.SaveChanges();
